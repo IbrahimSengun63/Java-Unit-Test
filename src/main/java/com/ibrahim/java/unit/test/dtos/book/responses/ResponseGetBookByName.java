@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResponseGetBook {
+public class ResponseGetBookByName {
     private String name;
     private boolean available;
 }

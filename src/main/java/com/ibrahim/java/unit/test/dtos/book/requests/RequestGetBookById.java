@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RequestGetBook {
-    private String name;
+public class RequestGetBookById {
+    private int id;
 }
