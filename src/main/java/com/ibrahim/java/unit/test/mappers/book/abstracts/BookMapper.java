@@ -1,4 +1,4 @@
-package com.ibrahim.java.unit.test.mappers.book;
+package com.ibrahim.java.unit.test.mappers.book.abstracts;
 
 import com.ibrahim.java.unit.test.dtos.book.requests.RequestAddBook;
 import com.ibrahim.java.unit.test.dtos.book.requests.RequestGetBookById;
@@ -17,7 +17,7 @@ public interface BookMapper {
 
 
     ResponseAddBook bookToResponseAddBook(Book book);
-    RequestGetBookById bookToResponseGetBookById(Book book);
+    ResponseGetBookById bookToResponseGetBookById(Book book);
     ResponseGetBookByName bookToResponseGetBookByName(Book book);
     ResponseUpdateBook bookToResponseUpdateBook(Book book);
 
