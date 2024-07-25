@@ -4,18 +4,14 @@ import com.ibrahim.java.unit.test.dtos.book.requests.RequestAddBook;
 import com.ibrahim.java.unit.test.dtos.book.requests.RequestGetBookById;
 import com.ibrahim.java.unit.test.dtos.book.requests.RequestGetBookByName;
 import com.ibrahim.java.unit.test.dtos.book.requests.RequestUpdateBook;
-import com.ibrahim.java.unit.test.dtos.book.responses.ResponseAddBook;
-import com.ibrahim.java.unit.test.dtos.book.responses.ResponseGetAllBook;
-import com.ibrahim.java.unit.test.dtos.book.responses.ResponseGetBookByName;
-import com.ibrahim.java.unit.test.dtos.book.responses.ResponseUpdateBook;
-import com.ibrahim.java.unit.test.entities.Book;
+import com.ibrahim.java.unit.test.dtos.book.responses.*;
 
 import java.util.List;
 
 public interface BookService {
     ResponseAddBook addBook(RequestAddBook requestAddBook);
     ResponseGetBookByName getBookByName(RequestGetBookByName requestGetBookByName);
-    RequestGetBookById getBookById(RequestGetBookById requestGetBookById);
+    ResponseGetBookById getBookById(RequestGetBookById requestGetBookById);
     ResponseUpdateBook updateBook(RequestUpdateBook requestUpdateBook);
     List<ResponseGetAllBook> getAllBooks();
 

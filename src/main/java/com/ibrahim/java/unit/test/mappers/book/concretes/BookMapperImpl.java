@@ -7,11 +7,12 @@ import com.ibrahim.java.unit.test.dtos.book.requests.RequestUpdateBook;
 import com.ibrahim.java.unit.test.dtos.book.responses.*;
 import com.ibrahim.java.unit.test.entities.Book;
 import com.ibrahim.java.unit.test.mappers.book.abstracts.BookMapper;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class BookMapperImpl implements BookMapper {
     @Override
     public Book requestAddBookToBook(RequestAddBook requestAddBook) {
@@ -29,7 +30,7 @@ public class BookMapperImpl implements BookMapper {
     }
 
     @Override
-    public Book requestGetBookById(RequestGetBookById requestGetBookById) {
+    public Book requestGetBookByIdToBook(RequestGetBookById requestGetBookById) {
         Book book = new Book();
         book.setId(requestGetBookById.getId());
         return book;
@@ -38,7 +39,9 @@ public class BookMapperImpl implements BookMapper {
     @Override
     public Book requestUpdateBookToBook(RequestUpdateBook requestUpdateBook) {
         Book book = new Book();
+        book.setId(requestUpdateBook.getId());
         book.setAvailable(requestUpdateBook.isAvailable());
+        book.setName(requestUpdateBook.getName());
         return book;
     }
 
@@ -51,8 +54,8 @@ public class BookMapperImpl implements BookMapper {
     }
 
     @Override
-    public ResponseGetBookById bookToResponseGetBookById(Book book) {
-        ResponseGetBookById responseGetBookById = new ResponseGetBookById();
+    public com.ibrahim.java.unit.test.dtos.book.responses.ResponseGetBookById bookToResponseGetBookById(Book book) {
+        com.ibrahim.java.unit.test.dtos.book.responses.ResponseGetBookById responseGetBookById = new com.ibrahim.java.unit.test.dtos.book.responses.ResponseGetBookById();
         responseGetBookById.setName(book.getName());
         responseGetBookById.setAvailable(book.isAvailable());
         return responseGetBookById;

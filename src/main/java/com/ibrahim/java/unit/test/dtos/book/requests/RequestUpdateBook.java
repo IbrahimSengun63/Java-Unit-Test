@@ -11,5 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RequestUpdateBook {
     private int id;
+    private String name;
     private boolean available;
 }

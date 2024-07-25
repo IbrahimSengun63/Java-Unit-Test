@@ -12,7 +12,7 @@ import java.util.List;
 public interface BookMapper {
     Book requestAddBookToBook(RequestAddBook requestAddBook);
     Book requestGetBookByNameToBook(RequestGetBookByName requestGetBookByName);
-    Book requestGetBookById(RequestGetBookById requestGetBookById);
+    Book requestGetBookByIdToBook(RequestGetBookById requestGetBookById);
     Book requestUpdateBookToBook(RequestUpdateBook requestUpdateBook);
 
 
